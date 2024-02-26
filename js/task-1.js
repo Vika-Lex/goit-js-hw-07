@@ -1,24 +1,8 @@
-const quantityEl = document.querySelectorAll(".item");
-console.log(`Nomber of categories: ${quantityEl.length}`);
+const categoryElements = document.querySelectorAll(".item");
 
-const titleEl = document.querySelectorAll("h2");
+console.log(`Number of categories: ${categoryElements.length}`);
 
-titleEl.forEach(function (title) {
-  title.classList.add("title-class");
-  const titleName = title.textContent;
-  console.log(`Category: ${titleName}`);
-
-  const allListEl = title.parentElement.querySelectorAll("ul>li");
-  console.log(`Elements: ${allListEl.length}`);
-});
-
-const itemEl = document.querySelectorAll("#categories > .item");
-itemEl.forEach(function (item) {
-  const ulEl = item.querySelector("ul");
-  ulEl.classList.add("my-ul-class");
-});
-
-const listEl = document.querySelectorAll("#categories > .list");
-titleEl.forEach(function (li) {
-  li.classList.add("my-li-class");
+categoryElements.forEach((el) => {
+  console.log(`Category: ${el.firstElementChild.textContent}`);
+  console.log(`Elements: ${el.lastElementChild.children.length}`);
 });

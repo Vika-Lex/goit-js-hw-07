@@ -11,7 +11,7 @@ function onCreate(event) {
     createBoxes(inputEl.value);
   }
 
-  //   console.log(inputEl.value);
+  inputEl.value = "";
 }
 
 function createBoxes(amount) {
@@ -27,7 +27,6 @@ function createBoxes(amount) {
   }
 
   containerDiv.append(...arrBox);
-  //   console.log(arrBox);
 }
 
 function onDestroy() {

@@ -19,7 +19,3 @@ function onSubmit(event) {
     formEl.reset();
   }
 }
-formEl.classList.add("login-form");
-formEl.elements.email.classList.add("inp-class");
-formEl.elements.password.classList.add("inp-class");
-formEl.querySelector("button[type='submit']").classList.add("btn-login");
