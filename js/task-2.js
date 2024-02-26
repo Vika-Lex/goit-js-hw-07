@@ -37,6 +37,3 @@ const markup = images.map(function (image) {
   return listItem;
 });
 list.append(...markup);
-
-// додати flex
-// li ширину через calc

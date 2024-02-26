@@ -3,11 +3,11 @@ formEl.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
   event.preventDefault();
-  //   console.dir(event.target);
+
   const emailValue = event.target.elements.email.value.trim();
-  //   console.log(emailValue);
+
   const passwordValue = event.target.elements.password.value.trim();
-  // console.log(passwordValue);
+
   if (!emailValue || !passwordValue) {
     return alert("All form fields must be filled in");
   } else {
@@ -19,3 +19,7 @@ function onSubmit(event) {
     formEl.reset();
   }
 }
+formEl.classList.add("login-form");
+formEl.elements.email.classList.add("inp-class");
+formEl.elements.password.classList.add("inp-class");
+formEl.querySelector("button[type='submit']").classList.add("btn-login");
